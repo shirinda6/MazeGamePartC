@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="cancelGenerate" prefHeight="200.0" prefWidth="400.0" styleClass="mazeView" stylesheets="@View.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MazeViewController">
+   <children>
+      <Pane prefHeight="261.0" prefWidth="470.0" styleClass="mazeView" stylesheets="@View.css">
+         <children>
+            <TextField fx:id="textField_mazeRows" alignment="CENTER" layoutX="192.0" layoutY="64.0" text="10" />
+            <Button layoutX="90.0" layoutY="185.0" mnemonicParsing="false" onAction="#cancelButtom" prefHeight="25.0" prefWidth="102.0" stylesheets="@View.css" text="Cancel">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="235.0" layoutY="185.0" mnemonicParsing="false" onAction="#generateMaze" prefHeight="23.0" prefWidth="102.0" stylesheets="@View.css" text="Generate Maze">
+               <font>
+                  <Font size="13.0" />
+               </font></Button>
+            <Label layoutX="57.0" layoutY="61.0" prefHeight="32.0" prefWidth="95.0" text="Maze rows :" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="54.0" layoutY="109.0" prefHeight="32.0" prefWidth="102.0" text="Maze Columns :" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <TextField fx:id="textField_mazeColumns" alignment="CENTER" layoutX="192.0" layoutY="112.0" text="10" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

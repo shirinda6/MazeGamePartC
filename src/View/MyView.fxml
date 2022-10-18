@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<?import View.*?>
+<BorderPane fx:id="BorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#mouseClicked" prefHeight="400.0" prefWidth="600.0" styleClass="root" stylesheets="@View.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MyViewController">
+    <top>
+        <MenuBar style="-fx-background-color: Grey;" BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#newMaze" text="New" />
+                        <MenuItem mnemonicParsing="false" onAction="#saveFile" text="Save" />
+                        <MenuItem mnemonicParsing="false" onAction="#openFile" text="Load" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Options">
+                    <items>
+                        <Menu mnemonicParsing="false" text="Select player">
+                            <items>
+                                <MenuItem id="Daenerys" fx:id="Daenerys" mnemonicParsing="false" onAction="#changetoDaenerys" text="Daenerys" />
+                                <MenuItem id="King" mnemonicParsing="false" onAction="#changetoTheNightKing" text="The Night King" />
+                                <MenuItem id="jonsnow" mnemonicParsing="false" onAction="#changetoJon" text="Jon-snow" />
+                            </items>
+                        </Menu>
+                        <MenuItem mnemonicParsing="false" onAction="#propscene" text="Properties" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" onAction="#exitProgram" text="Exit">
+                    <items>
+                        <MenuItem id="Exit" mnemonicParsing="false" onAction="#exitProgram" text="Exit" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#helpscene" text="How To Play" />
+                    </items></Menu>
+                <Menu mnemonicParsing="false" text="About">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#aboutscene" text="About the game" />
+                    </items></Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <Pane fx:id="program_pane" prefHeight="375.0" prefWidth="525.0" BorderPane.alignment="CENTER">
+            <children>
+                <Pane fx:id="game_pane" layoutX="131.0" layoutY="-1.0" onScroll="#zoom" prefHeight="376.0" prefWidth="470.0">
+                    <children>
+                        <MazeDisplayer fx:id="mazeDisplayer" height="700" imageFileNameArya="resources/images/pl.jpg" imageFileNameDaenerys="resources/images/dans.jpg" imageFileNameJon="resources/images/Jons.jpg" imageFileNamePlayer="resources/images/pl.jpg" imageFileNameRoad="resources/images/Jonroad.jpg" imageFileNameRoadDan="resources/images/danroad.jpg" imageFileNameRoadJon="resources/images/Jonroad.jpg" imageFileNameSol="resources/images/sol.jpg" imageFileNameWall="resources/images/ice.jpg" imageNameGoal="resources/images/thrones.jpg" onKeyPressed="#keyPressed" onMouseEntered="#mouseClicked" width="700" />
+                    </children>
+                </Pane>
+                <VBox fx:id="box_game" layoutX="-1.0" layoutY="-1.0" prefHeight="377.0" prefWidth="132.0">
+                    <children>
+                        <Pane fx:id="pane_solve" prefHeight="200.0" prefWidth="200.0">
+                            <children>
+                                <Button fx:id="solve" layoutX="26.0" layoutY="33.0" mnemonicParsing="false" onAction="#solveMaze" prefHeight="23.0" prefWidth="81.0" text="Solve" />
+                                <RadioButton fx:id="radioButton" layoutX="26.0" layoutY="75.0" mnemonicParsing="false" onAction="#playMusic" prefHeight="28.0" prefWidth="110.0" selected="true" styleClass="create-music-btn" stylesheets="@View.css" text="Play music" textFill="#cdcdcd">
+                                    <font>
+                                        <Font size="13.0" />
+                                    </font></RadioButton>
+                            </children>
+                        </Pane>
+                    </children>
+                </VBox>
+            </children>
+        </Pane>
+    </center>
+</BorderPane>
