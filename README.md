@@ -1,8 +1,7 @@
 # Maze Game - Game of Thrones.
 
-Focus on search algorithms and strategy design pattern.
-
-Which allows you to build the game board in real time according to a selected search algorithm.
+Application of a maze game where the theme is "Game of Thrones".</br>
+Allows you to create and try to solve differents game boards and discover the shortest path according to differents search algorithms.
 
 <p align="center">
 <img width="859" alt="image" src="https://user-images.githubusercontent.com/81624047/196476307-f1715054-abde-441c-b393-01762bc63c59.png">
